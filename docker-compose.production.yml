@@ -1,0 +1,6 @@
+services:
+  site-tuinstra:
+    image: ghcr.io/marcel-tuinstra/site-tuinstra:latest
+    ports:
+      - "3001:80"
+    restart: unless-stopped

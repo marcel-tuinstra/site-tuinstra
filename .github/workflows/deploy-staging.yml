@@ -1,0 +1,22 @@
+name: Deploy Staging
+
+on:
+  push:
+    branches: [develop]
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  deploy:
+    uses: marcel-tuinstra/devops/.github/workflows/reusable-cd-nuxt-ssg.yml@v1
+    secrets: inherit
+    with:
+      service-name: site-tuinstra
+      image-name: ghcr.io/marcel-tuinstra/site-tuinstra
+      environment: staging
+      remote-path: /mnt/ssd1000-01/projects/site-tuinstra/staging
+      ssh-user: mtuinstra
+      dockerfile: Dockerfile
+      compose-file: docker-compose.staging.yml
