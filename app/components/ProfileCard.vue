@@ -1,9 +1,24 @@
 <script setup lang="ts">
 import type { Profile } from '~/types/profile'
 
-defineProps<{
+const props = defineProps<{
   profile: Profile
 }>()
+
+/** Get the primary contact (first in array) for the CTA */
+const primaryContact = computed(() => props.profile.contacts[0])
+
+/** Generate a display label for a contact type */
+function getContactLabel(type: string): string {
+  const labels: Record<string, string> = {
+    website: 'Bekijk website',
+    linkedin: 'LinkedIn',
+    github: 'GitHub',
+    email: 'E-mail',
+    phone: 'Bel'
+  }
+  return labels[type] ?? 'Contact'
+}
 </script>
 
 <template>
@@ -16,8 +31,9 @@ defineProps<{
         {{ profile.descriptor }}
       </p>
       <UButton
-        :to="profile.ctaLink"
-        :label="profile.ctaLabel"
+        v-if="primaryContact"
+        :to="primaryContact.url"
+        :label="primaryContact.label ?? getContactLabel(primaryContact.type)"
         target="_blank"
         size="lg"
       />
