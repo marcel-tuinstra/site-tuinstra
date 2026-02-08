@@ -4,7 +4,7 @@ export const profiles: Profile[] = [
   {
     name: 'Marcel',
     slug: 'marcel',
-    descriptor: 'Senior Software Engineer',
+    descriptor: 'Full-Stack Developer',
     contacts: [
       { type: 'website', url: 'https://marcel.tuinstra.dev' },
       { type: 'linkedin', url: 'https://www.linkedin.com/in/marcel-tuinstra-6a98895a/' },
