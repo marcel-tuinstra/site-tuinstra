@@ -1,0 +1,16 @@
+name: PR Checks
+
+on:
+  pull_request:
+    branches: ['**']
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: marcel-tuinstra/devops/.github/workflows/reusable-ci.yml@v1
+    with:
+      install-command: npm install
+      test-command: npm run test
