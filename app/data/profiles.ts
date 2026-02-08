@@ -4,10 +4,10 @@ export const profiles: Profile[] = [
   {
     name: 'Marcel',
     slug: 'marcel',
-    descriptor: 'Developer & Designer',
+    descriptor: 'Full-Stack Developer',
     contacts: [
       { type: 'website', url: 'https://marcel.tuinstra.dev' },
-      { type: 'linkedin', url: 'https://linkedin.com/in/marceltuinstra' },
+      { type: 'linkedin', url: 'https://www.linkedin.com/in/marcel-tuinstra-6a98895a/' },
       { type: 'github', url: 'https://github.com/marcel-tuinstra' },
       { type: 'email', url: 'mailto:marcel@tuinstra.dev' }
     ]
@@ -15,11 +15,10 @@ export const profiles: Profile[] = [
   {
     name: 'Daan',
     slug: 'daan',
-    descriptor: 'Developer & Gamer',
+    descriptor: 'Lecturer CMGT / Researcher XR',
     contacts: [
-      { type: 'linkedin', url: 'https://linkedin.com/in/daantuinstra' },
-      { type: 'github', url: 'https://github.com/daantuinstra' },
-      { type: 'email', url: 'mailto:daan@tuinstra.dev' }
+      { type: 'linkedin', url: 'https://www.linkedin.com/in/daan-tuinstra-24660210a/' },
+      { type: 'email', url: 'mailto:daantuinstra@hotmail.com' }
     ]
   }
 ]
