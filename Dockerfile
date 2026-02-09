@@ -1,14 +1,20 @@
 FROM node:22-alpine AS builder
 WORKDIR /app
 
+# Update base image packages for security patches
+RUN apk upgrade --no-cache
+
 COPY package*.json ./
-RUN npm ci
+RUN npm ci || npm install
 
 COPY . .
 RUN npm run generate
 
 FROM nginx:1.27-alpine
-RUN apk add --no-cache curl
+
+# Update base image packages for security patches
+RUN apk upgrade --no-cache && apk add --no-cache curl
+
 COPY --from=builder /app/.output/public /usr/share/nginx/html
 EXPOSE 80
 
