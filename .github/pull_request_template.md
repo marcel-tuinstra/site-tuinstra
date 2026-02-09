@@ -1,17 +1,17 @@
+## Status
+
+[![CI](../../actions/workflows/pr-checks.yml/badge.svg)](../../actions/workflows/pr-checks.yml)
+
 ## Summary
 
-<!-- Brief description of the changes -->
-
-## Shortcut Story
-
-<!-- Link to the Shortcut story -->
-
-## Changes
-
-- 
+<!-- Describe what this PR changes and why -->
 
 ## Checklist
 
 - [ ] `make lint` passes
 - [ ] `make test` passes
 - [ ] PR title follows format: `<type>[SC-<id>] <title>`
+
+## Shortcut
+
+<!-- Link to Shortcut story: https://app.shortcut.com/tuinstradev/story/XXX -->
