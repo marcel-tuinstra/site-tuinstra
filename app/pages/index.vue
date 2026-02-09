@@ -17,14 +17,9 @@ useSeoMeta({
   ogType: 'website',
   ogUrl: 'https://tuinstra.dev/',
   ogSiteName: 'Tuinstra.dev',
-  ogImage: 'https://tuinstra.dev/og/hub.svg',
-  ogImageWidth: 1200,
-  ogImageHeight: 630,
-  ogImageAlt: 'Tuinstra.dev — Marcel & Daan Tuinstra',
-  twitterCard: 'summary_large_image',
+  twitterCard: 'summary',
   twitterTitle: 'Tuinstra.dev',
-  twitterDescription: 'Tuinstra.dev — Marcel (Full-Stack Developer) of Daan (Lecturer CMGT / Researcher XR)',
-  twitterImage: 'https://tuinstra.dev/og/hub.svg'
+  twitterDescription: 'Tuinstra.dev — Marcel (Full-Stack Developer) of Daan (Lecturer CMGT / Researcher XR)'
 })
 </script>
 
