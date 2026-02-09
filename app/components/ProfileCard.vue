@@ -13,6 +13,7 @@ defineProps<{
     :aria-label="`Bekijk profiel van ${profile.name} Tuinstra — ${profile.descriptor}`"
   >
     <UCard
+      variant="outline"
       class="h-full text-center transition-all duration-200
              group-hover:ring-2 group-hover:ring-primary group-hover:shadow-lg
              group-focus-visible:ring-2 group-focus-visible:ring-primary group-focus-visible:ring-offset-2
