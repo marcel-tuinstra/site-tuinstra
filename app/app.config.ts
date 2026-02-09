@@ -18,7 +18,7 @@
  *
  * Background:
  * - Animated grid pattern (defined in main.css)
- * - Cards use opaque zinc-900 backgrounds, floating above grid
+ * - Cards use semi-transparent zinc-900/80 backgrounds, grid faintly visible
  *
  * Visual Style: Refined Brutalist
  * - Solid opaque cards with subtle ring borders
@@ -35,7 +35,7 @@ export default defineAppConfig({
       variants: {
         variant: {
           outline: {
-            root: 'bg-zinc-900 ring-1 ring-zinc-700 divide-y divide-zinc-800'
+            root: 'bg-zinc-900/80 ring-1 ring-zinc-700 divide-y divide-zinc-800'
           }
         }
       }
