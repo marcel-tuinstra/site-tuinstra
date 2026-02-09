@@ -18,6 +18,12 @@ defineProps<{
              group-active:scale-[0.98]"
     >
       <div class="space-y-4 py-2">
+        <UAvatar
+          :src="profile.avatarUrl"
+          :alt="profile.name"
+          size="3xl"
+          class="mx-auto rounded-lg"
+        />
         <div class="space-y-2">
           <h2 class="text-2xl font-bold tracking-tight">
             {{ profile.name }} Tuinstra
