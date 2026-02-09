@@ -1,2 +1,12 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
+
+/* JetBrains Mono - Primary font for developer aesthetic */
+@import "@fontsource/jetbrains-mono/400.css";
+@import "@fontsource/jetbrains-mono/500.css";
+@import "@fontsource/jetbrains-mono/700.css";
+
+/* Apply JetBrains Mono as default font */
+@theme {
+  --font-sans: "JetBrains Mono", ui-monospace, monospace;
+}

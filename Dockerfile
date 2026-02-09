@@ -5,7 +5,7 @@ WORKDIR /app
 RUN apk upgrade --no-cache
 
 COPY package*.json ./
-RUN npm ci
+RUN npm ci || npm install
 
 COPY . .
 RUN npm run generate

@@ -18,6 +18,8 @@ export interface Profile {
   slug: string
   /** Short descriptor / role */
   descriptor: string
+  /** Avatar image URL (typically GitHub profile photo) */
+  avatarUrl: string
   /** Optional bio / tagline for the business card */
   bio?: string
   /** Contact methods displayed in order (all optional) */
