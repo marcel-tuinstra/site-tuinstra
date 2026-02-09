@@ -53,17 +53,18 @@ useSeoMeta({
       <!-- Back navigation -->
       <NuxtLink
         to="/"
-        class="inline-flex items-center gap-1 text-sm text-muted hover:text-default transition-colors"
+        class="inline-flex items-center gap-1 text-sm text-muted hover:text-default transition-colors rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
       >
         <UIcon
           name="i-lucide-arrow-left"
           class="size-4"
+          aria-hidden="true"
         />
         Terug naar overzicht
       </NuxtLink>
 
       <!-- Profile card -->
-      <UCard>
+      <UCard variant="outline">
         <div class="space-y-6">
           <!-- Header -->
           <header class="text-center space-y-4">
