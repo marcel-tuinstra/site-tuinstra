@@ -10,6 +10,7 @@ defineProps<{
   <NuxtLink
     :to="`/${profile.slug}`"
     class="block group"
+    :aria-label="`Bekijk profiel van ${profile.name} Tuinstra — ${profile.descriptor}`"
   >
     <UCard
       class="h-full text-center transition-all duration-200
@@ -32,7 +33,7 @@ defineProps<{
             {{ profile.descriptor }}
           </p>
         </div>
-        <div
+        <span
           class="inline-flex items-center gap-2 text-primary font-medium
                  group-hover:gap-3 transition-all duration-200"
           aria-hidden="true"
@@ -42,7 +43,7 @@ defineProps<{
             name="i-lucide-arrow-right"
             class="size-5"
           />
-        </div>
+        </span>
       </div>
     </UCard>
   </NuxtLink>
