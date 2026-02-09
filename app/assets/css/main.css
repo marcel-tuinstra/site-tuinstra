@@ -10,3 +10,21 @@
 @theme {
   --font-sans: "JetBrains Mono", ui-monospace, monospace;
 }
+
+/* Animated grid background */
+@keyframes grid-scroll {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 50px 50px;
+  }
+}
+
+body {
+  background-color: #09090b;
+  background-image: linear-gradient(#18181b 1px, transparent 1px),
+    linear-gradient(90deg, #18181b 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: grid-scroll 4s linear infinite;
+}

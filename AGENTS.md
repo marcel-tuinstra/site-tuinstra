@@ -51,6 +51,10 @@ tests/              # Test files
 - Use Tailwind CSS utility classes via Nuxt UI.
 - Avoid custom CSS unless necessary; use `app/assets/css/main.css` for globals.
 - Use Nuxt UI components (`UButton`, `UCard`, etc.) over custom implementations.
+- **Component theming**: Customize Nuxt UI components via `app/app.config.ts`, not inline classes.
+  - Use the `ui` config object to override component variants and slots.
+  - Avoid inline `class` overrides on Nuxt UI components where possible.
+  - See [Nuxt UI Theming](https://ui.nuxt.com/getting-started/theme) for reference.
 
 ## Commit & PR Conventions
 
