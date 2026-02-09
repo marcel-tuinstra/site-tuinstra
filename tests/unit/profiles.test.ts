@@ -22,8 +22,15 @@ describe('profiles data', () => {
       expect(profile.name).toBeTruthy()
       expect(profile.slug).toBeTruthy()
       expect(profile.descriptor).toBeTruthy()
+      expect(profile.avatarUrl).toBeTruthy()
       expect(profile.contacts).toBeInstanceOf(Array)
       expect(profile.contacts.length).toBeGreaterThan(0)
+    }
+  })
+
+  it('should have valid avatar URLs from GitHub', () => {
+    for (const profile of profiles) {
+      expect(profile.avatarUrl).toMatch(/^https:\/\/github\.com\/[\w-]+\.png$/)
     }
   })
 

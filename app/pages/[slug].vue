@@ -62,19 +62,27 @@ useSeoMeta({
       <UCard>
         <div class="space-y-6">
           <!-- Header -->
-          <header class="text-center space-y-2">
-            <h1 class="text-3xl font-bold tracking-tight">
-              {{ profile.name }} Tuinstra
-            </h1>
-            <p class="text-lg text-muted">
-              {{ profile.descriptor }}
-            </p>
-            <p
-              v-if="profile.bio"
-              class="text-sm text-muted"
-            >
-              {{ profile.bio }}
-            </p>
+          <header class="text-center space-y-4">
+            <UAvatar
+              :src="profile.avatarUrl"
+              :alt="profile.name"
+              size="3xl"
+              class="mx-auto rounded-lg"
+            />
+            <div class="space-y-1">
+              <h1 class="text-3xl font-bold tracking-tight">
+                {{ profile.name }} Tuinstra
+              </h1>
+              <p class="text-lg text-muted">
+                {{ profile.descriptor }}
+              </p>
+              <p
+                v-if="profile.bio"
+                class="text-sm text-muted"
+              >
+                {{ profile.bio }}
+              </p>
+            </div>
           </header>
 
           <!-- Contact methods -->
