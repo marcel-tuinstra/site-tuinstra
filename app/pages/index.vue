@@ -1,5 +1,26 @@
 <script setup lang="ts">
 import { profiles } from '~/data/profiles'
+
+// SEO metadata for hub page
+useHead({
+  title: 'Tuinstra.dev',
+  link: [
+    { rel: 'canonical', href: 'https://tuinstra.dev/' }
+  ]
+})
+
+useSeoMeta({
+  title: 'Tuinstra.dev',
+  description: 'Familie Tuinstra — kies het juiste profiel. Vind Marcel (Full-Stack Developer) of Daan (Lecturer CMGT / Researcher XR).',
+  ogTitle: 'Tuinstra.dev',
+  ogDescription: 'Familie Tuinstra — kies het juiste profiel',
+  ogType: 'website',
+  ogUrl: 'https://tuinstra.dev/',
+  ogSiteName: 'Tuinstra.dev',
+  twitterCard: 'summary',
+  twitterTitle: 'Tuinstra.dev',
+  twitterDescription: 'Familie Tuinstra — kies het juiste profiel'
+})
 </script>
 
 <template>

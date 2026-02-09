@@ -17,14 +17,29 @@ if (!profileData.value) {
 // Non-null assertion after 404 check - profile is guaranteed to exist
 const profile = profileData.value
 
-// Set page meta
+// SEO metadata for profile page
+const pageTitle = `${profile.name} Tuinstra — ${profile.descriptor}`
+const pageDescription = `${profile.name} Tuinstra — ${profile.descriptor}. Neem contact op via de beschikbare kanalen.`
+const pageUrl = `https://tuinstra.dev/${profile.slug}`
+
 useHead({
-  title: `${profile.name} Tuinstra`
+  title: pageTitle,
+  link: [
+    { rel: 'canonical', href: pageUrl }
+  ]
 })
 
 useSeoMeta({
-  title: `${profile.name} Tuinstra`,
-  description: profile.descriptor
+  title: pageTitle,
+  description: pageDescription,
+  ogTitle: pageTitle,
+  ogDescription: pageDescription,
+  ogType: 'profile',
+  ogUrl: pageUrl,
+  ogSiteName: 'Tuinstra.dev',
+  twitterCard: 'summary',
+  twitterTitle: pageTitle,
+  twitterDescription: pageDescription
 })
 </script>
 
