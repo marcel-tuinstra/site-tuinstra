@@ -27,10 +27,10 @@ useSeoMeta({
   <div class="flex min-h-screen items-center justify-center px-4 py-8">
     <div class="w-full max-w-3xl space-y-10">
       <header class="text-center space-y-4">
-        <h1 class="text-4xl font-bold tracking-tight sm:text-5xl">
+        <h1 class="text-4xl font-bold tracking-widest uppercase sm:text-5xl">
           Tuinstra.dev
         </h1>
-        <p class="text-center text-xl font-medium">
+        <p class="text-lg text-muted">
           Wie zoek je?
         </p>
       </header>

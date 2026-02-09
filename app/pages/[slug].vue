@@ -64,7 +64,7 @@ useSeoMeta({
       </NuxtLink>
 
       <!-- Profile card -->
-      <UCard>
+      <UCard variant="outline">
         <div class="space-y-6">
           <!-- Header -->
           <header class="text-center space-y-4">
