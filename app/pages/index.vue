@@ -1,25 +1,37 @@
 <script setup lang="ts">
 import { profiles } from '~/data/profiles'
 
+// SEO metadata for hub page
 useHead({
-  title: 'Tuinstra.dev'
+  title: 'Tuinstra.dev',
+  link: [
+    { rel: 'canonical', href: 'https://tuinstra.dev/' }
+  ]
 })
 
 useSeoMeta({
   title: 'Tuinstra.dev',
-  description: 'Familie Tuinstra — kies het juiste profiel'
+  description: 'Tuinstra.dev — Marcel (Full-Stack Developer) of Daan (Lecturer CMGT / Researcher XR)',
+  ogTitle: 'Tuinstra.dev',
+  ogDescription: 'Tuinstra.dev — Marcel (Full-Stack Developer) of Daan (Lecturer CMGT / Researcher XR)',
+  ogType: 'website',
+  ogUrl: 'https://tuinstra.dev/',
+  ogSiteName: 'Tuinstra.dev',
+  twitterCard: 'summary',
+  twitterTitle: 'Tuinstra.dev',
+  twitterDescription: 'Tuinstra.dev — Marcel (Full-Stack Developer) of Daan (Lecturer CMGT / Researcher XR)'
 })
 </script>
 
 <template>
   <div class="flex min-h-screen items-center justify-center px-4 py-8">
-    <div class="w-full max-w-2xl space-y-10">
+    <div class="w-full max-w-3xl space-y-10">
       <header class="text-center space-y-4">
         <h1 class="text-4xl font-bold tracking-tight sm:text-5xl">
           Tuinstra.dev
         </h1>
-        <p class="text-lg text-muted max-w-md mx-auto">
-          Welkom bij de familie Tuinstra. Kies hieronder wie je zoekt om naar het juiste profiel te gaan.
+        <p class="text-center text-xl font-medium">
+          Wie zoek je?
         </p>
       </header>
 
@@ -30,9 +42,6 @@ useSeoMeta({
         >
           Kies een profiel
         </h2>
-        <p class="text-center text-xl font-medium mb-6">
-          Wie zoek je?
-        </p>
         <div class="grid gap-6 sm:grid-cols-2">
           <ProfileCard
             v-for="profile in profiles"
