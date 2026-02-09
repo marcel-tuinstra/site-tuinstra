@@ -21,6 +21,7 @@ const profile = profileData.value
 const pageTitle = `${profile.name} Tuinstra — ${profile.descriptor}`
 const pageDescription = `${profile.name} Tuinstra — ${profile.descriptor}. Neem contact op via de beschikbare kanalen.`
 const pageUrl = `https://tuinstra.dev/${profile.slug}`
+const ogImageUrl = `https://tuinstra.dev/og/${profile.slug}.svg`
 
 useHead({
   title: pageTitle,
@@ -37,9 +38,14 @@ useSeoMeta({
   ogType: 'profile',
   ogUrl: pageUrl,
   ogSiteName: 'Tuinstra.dev',
-  twitterCard: 'summary',
+  ogImage: ogImageUrl,
+  ogImageWidth: 1200,
+  ogImageHeight: 630,
+  ogImageAlt: pageTitle,
+  twitterCard: 'summary_large_image',
   twitterTitle: pageTitle,
-  twitterDescription: pageDescription
+  twitterDescription: pageDescription,
+  twitterImage: ogImageUrl
 })
 </script>
 
