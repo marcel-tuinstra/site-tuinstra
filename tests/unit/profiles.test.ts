@@ -22,14 +22,35 @@ describe('profiles data', () => {
       expect(profile.name).toBeTruthy()
       expect(profile.slug).toBeTruthy()
       expect(profile.descriptor).toBeTruthy()
-      expect(profile.ctaLink).toBeTruthy()
-      expect(profile.ctaLabel).toBeTruthy()
+      expect(profile.avatarUrl).toBeTruthy()
+      expect(profile.contacts).toBeInstanceOf(Array)
+      expect(profile.contacts.length).toBeGreaterThan(0)
     }
   })
 
-  it('should have valid CTA links', () => {
+  it('should have valid avatar URLs from GitHub', () => {
     for (const profile of profiles) {
-      expect(profile.ctaLink).toMatch(/^https?:\/\//)
+      expect(profile.avatarUrl).toMatch(/^https:\/\/github\.com\/[\w-]+\.png$/)
+    }
+  })
+
+  it('should have valid contact URLs', () => {
+    const validTypes = ['website', 'linkedin', 'github', 'email', 'phone']
+
+    for (const profile of profiles) {
+      for (const contact of profile.contacts) {
+        expect(validTypes).toContain(contact.type)
+        expect(contact.url).toBeTruthy()
+
+        // Validate URL format based on type
+        if (contact.type === 'email') {
+          expect(contact.url).toMatch(/^mailto:/)
+        } else if (contact.type === 'phone') {
+          expect(contact.url).toMatch(/^tel:/)
+        } else {
+          expect(contact.url).toMatch(/^https?:\/\//)
+        }
+      }
     }
   })
 })

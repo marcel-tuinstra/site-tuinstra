@@ -2,17 +2,37 @@
 export default defineNuxtConfig({
   modules: [
     '@nuxt/eslint',
-    '@nuxt/ui'
+    '@nuxt/ui',
+    '@nuxtjs/sitemap',
+    '@nuxtjs/robots'
   ],
+
+  // Site configuration for SEO modules
+  $production: {
+    site: {
+      url: 'https://tuinstra.dev'
+    }
+  },
 
   devtools: {
     enabled: true
   },
 
+  // Global app configuration
+  app: {
+    head: {
+      htmlAttrs: {
+        lang: 'nl'
+      }
+    }
+  },
+
   css: ['~/assets/css/main.css'],
 
   routeRules: {
-    '/': { prerender: true }
+    '/': { prerender: true },
+    '/marcel': { prerender: true },
+    '/daan': { prerender: true }
   },
 
   compatibilityDate: '2025-01-15',
@@ -24,5 +44,10 @@ export default defineNuxtConfig({
         braceStyle: '1tbs'
       }
     }
+  },
+
+  // Robots.txt configuration
+  robots: {
+    sitemap: '/sitemap.xml'
   }
 })
